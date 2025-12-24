@@ -1,0 +1,29 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-brand-navy {
+    background-color: #0f172a;
+}
+
+.text-brand-navy {
+    color: #0f172a;
+}
+
+.bg-brand-teal {
+    background-color: #14b8a6;
+}
+
+.text-brand-teal {
+    color: #14b8a6;
+}
+
+.bg-brand-red {
+    background-color: #ef4444;
+}
+
+.text-brand-red {
+    color: #ef4444;
+}
