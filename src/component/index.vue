@@ -178,7 +178,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Thai
                             Native</h3>
-                        <p class="text-slate-500 text-sm">Native Proficiency</p>
+                   
                     </div>
                 </div>
 
@@ -192,7 +192,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">
                             English B1</h3>
-                        <p class="text-slate-500 text-sm">Intermediate Level</p>
+                
                     </div>
                 </div>
 
@@ -206,7 +206,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-emerald-600 transition-colors">
                             Eager to Learn</h3>
-                        <p class="text-slate-500 text-sm">Always improving</p>
+                   
                     </div>
                 </div>
 
@@ -220,7 +220,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-teal-600 transition-colors">
                             Teamwork & Communication</h3>
-                        <p class="text-slate-500 text-sm">Collaborative spirit</p>
+               
                     </div>
                 </div>
 
@@ -234,7 +234,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-rose-600 transition-colors">Problem
                             Solving</h3>
-                        <p class="text-slate-500 text-sm">Critical thinking</p>
+                      
                     </div>
                 </div>
 
@@ -248,7 +248,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-amber-600 transition-colors">High
                             Responsibility</h3>
-                        <p class="text-slate-500 text-sm">Reliable & Accountable</p>
+                   
                     </div>
                 </div>
 
@@ -262,7 +262,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-red-600 transition-colors">Work
                             Under Pressure</h3>
-                        <p class="text-slate-500 text-sm">Resilient & Focused</p>
+                   
                     </div>
                 </div>
 
@@ -276,7 +276,6 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-violet-600 transition-colors">
                             Punctual & Reliable</h3>
-                        <p class="text-slate-500 text-sm">Time management</p>
                     </div>
                 </div>
 
