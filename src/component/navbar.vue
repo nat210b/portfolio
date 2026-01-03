@@ -9,8 +9,10 @@
         <div class="flex gap-6 text-sm font-medium text-white">
             <a href="/" class="hover:text-brand-teal transition">Home</a>
             <a href="#profile" class="hover:text-brand-teal transition">About</a>
-            <a href="#experiences" class="hover:text-brand-teal transition">experiences</a>
-            <a href="#certificate" class="hover:text-brand-teal transition">certificate</a>
+            <a href="#projects" class="hover:text-brand-teal transition">Projects</a>
+            <a href="#experiences" class="hover:text-brand-teal transition">Experiences</a>
+            <a href="#certificate" class="hover:text-brand-teal transition">Certificates</a>
+            <a href="#tech-skill" class="hover:text-brand-teal transition">Skills</a>
         </div>
     </nav>
 </template>

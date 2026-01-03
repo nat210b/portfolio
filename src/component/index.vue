@@ -12,21 +12,14 @@
 
 
     <section id="profile" class="py-20 px-6 bg-white">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="section-title">Profile</h2>
-            <p class="section-text">
-                I am a Full-stack Developer with a strong foundation in data science and business analysis.
-                I enjoy developing systems that solve real problems, from ERP platforms for small clinics
-                to data analytics solutions in healthcare.
-                <br /><br />
-                My background allows me to communicate effectively with both technical and non-technical stakeholders,
-                turning requirements into scalable and user-centered solutions.
-            </p>
-        </div>
+        <Profile />
+    </section>
+    <section id="projects" class="py-20 px-6 bg-brand-navy  from-gray-50 to-white">
+        <Project />
     </section>
 
     <section id="experiences" class="py-20 px-6 bg-white">
-        <h2 class="section-title text-center mb-12">Experiences</h2>
+        <h2 class="text-4xl text-center font-bold text-brand-navy">Experiences</h2>
         <div class="flex bg-white p-3">
             <TimelineExperience :experiences="allExperiences" @hover="activeExperience = $event" />
             <MapExperience :activeExperience="activeExperience" />
@@ -34,99 +27,219 @@
     </section>
     <section id="certificate" class="py-20 px-6 bg-gray-50">
         <div class="max-w-5xl mx-auto text-center">
-            <h2 class="section-title mb-6">Certificates</h2>
+            <h2 class="text-4xl text-center font-bold text-brand-navy mb-5">Certificates</h2>
+        </div>
+        <CertificateCarousel />
+    </section>
 
-            <p class="text-gray-600 mb-8">
-                Selected certifications related to data, software, and platform development.
-            </p>
-
-            <button class="more-btn" @click="showModal = true">
-                See Certificates
-            </button>
+    <section id="tech-skill" class="py-24 px-6 bg-white relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div
+            class="absolute top-0 left-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-60">
+        </div>
+        <div
+            class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-50 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 opacity-60">
         </div>
 
-        <!-- MODAL -->
-        <transition name="modal-fade">
-            <div v-if="showModal" class="modal-backdrop" @click.self="closeModal">
-                <div class="modal-box">
-                    <button class="close-btn" @click="closeModal">✕</button>
-
-                    <!-- 🔥 Carousel ของนาย -->
-                    <CertificateCarousel />
-                </div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-semibold tracking-wider uppercase text-sm">Expertise</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Technical Skills</h2>
             </div>
-        </transition>
-    </section>
 
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
 
-
-    <section id="publication" class="py-20 px-6 bg-white">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="section-title">Publication</h2>
-            <p class="section-text">
-                Published a research paper on sentiment-based opinion classification
-                of student feedback in teaching evaluation systems,
-                presented at the 14th Phayao Research Conference.
-            </p>
-        </div>
-    </section>
-
-
-    <!-- EDUCATION -->
-    <section id="education" class="py-20 px-6 bg-gray-50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="section-title">Education</h2>
-
-            <div class="space-y-6">
-                <div>
-                    <h3 class="font-semibold text-lg text-brand-navy">
-                        King Mongkut's University of Technology North Bangkok
-                    </h3>
-                    <p class="text-gray-700">
-                        Bachelor's Degree (2024) — GPA 3.35 (Second Class Honors)
-                    </p>
+                <!-- Frontend / Mobile -->
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-brands fa-vuejs text-2xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700">Vue.js</span>
                 </div>
 
-                <div>
-                    <h3 class="font-semibold text-lg text-brand-navy">
-                        Wang Klaikangwon Vocational College
-                    </h3>
-                    <p class="text-gray-700">
-                        Electronics Engineering
-                    </p>
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-brands fa-react text-2xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700">React</span>
                 </div>
+
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-brands fa-angular text-2xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700">Angular</span>
+                </div>
+
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-500 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-mobile-screen text-2xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700">Flutter</span>
+                </div>
+
+                <!-- Backend / Data -->
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-yellow-50 flex items-center justify-center text-yellow-600 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-brands fa-python text-2xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700">Python</span>
+                </div>
+
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-fire text-2xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700">Firebase</span>
+                </div>
+
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-leaf text-2xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700">MongoDB</span>
+                </div>
+
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-database text-2xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700">SQL</span>
+                </div>
+
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 group-hover:bg-blue-700 group-hover:text-white transition-colors duration-300">
+                        <span class="text-xl font-bold">R</span>
+                    </div>
+                    <span class="font-semibold text-slate-700">R Language</span>
+                </div>
+
+                <!-- Tools -->
+                <div
+                    class="skill-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center gap-4 group cursor-default">
+                    <div
+                        class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-brands fa-microsoft text-2xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700">Power Platform</span>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="tech-skill" class="py-20 px-6 bg-white">
+    <section id="soft-skill" class="py-24 px-6 bg-slate-50">
         <div class="max-w-5xl mx-auto">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="flex flex-wrap gap-3">
-                <span class="skill-pill">Vue.js</span>
-                <span class="skill-pill">Firebase</span>
-                <span class="skill-pill">Python</span>
-                <span class="skill-pill">R</span>
-                <span class="skill-pill">SQL</span>
-                <span class="skill-pill">Power Platform</span>
-                <span class="skill-pill">MEAN Stack</span>
-                <span class="skill-pill">Flutter</span>
-                <span class="skill-pill">React</span>
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-semibold tracking-wider uppercase text-sm">Personal Attributes</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Soft Skills</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Fluent in Thai & English -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-language text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Fluent in Thai & English</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Proficient in both languages, enabling effective communication in diverse, multicultural
+                            environments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Teamwork & Communication -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-users text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Teamwork & Communication</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Collaborative team player with strong interpersonal skills, fostering open dialogue and
+                            synergy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Problem Solving -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-puzzle-piece text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Problem Solving</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Analytical mindset focused on identifying root causes and implementing effective, logical
+                            solutions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- High Responsibility -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-list-check text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">High Responsibility</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Dedicated and reliable, taking full ownership of tasks and ensuring high-quality
+                            deliverables.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ability to Work Under Pressure -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors md:col-span-2">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-gauge-high text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Ability to Work Under Pressure</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Resilient and focused, maintaining performance and clarity even in high-stakes or
+                            tight-deadline situations.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="soft-skill" class="py-20 px-6 bg-gray-50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="section-title">Soft Skills</h2>
-            <ul class="list-disc pl-6 text-gray-700 space-y-1">
-                <li>Analytical thinking & problem solving</li>
-                <li>Clear communication with stakeholders</li>
-                <li>User-centered mindset</li>
-                <li>Adaptability and fast learning</li>
-            </ul>
-        </div>
-    </section>
 </template>
 
 <script setup>
@@ -134,11 +247,13 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore'
 import { db } from '@/firebase'
 import CertificateCarousel from './Cert.vue'
+import Profile from './Profile.vue'
 
 const showCarousel = ref(false)
 
 import MapExperience from './MapExperience.vue'
 import TimelineExperience from './TimelineExperience.vue'
+import Project from './Project.vue'
 
 // ===== MAP (ยัง static ไปก่อน) =====
 const mapExperiences = [
