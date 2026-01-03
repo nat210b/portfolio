@@ -36,7 +36,7 @@
                                     @error="handleLogoError" 
                                     alt="Company Logo" />
                                 <img v-else-if="job.company.includes('KCMH')" 
-                                    src="../assets/KCMH.jpeg" 
+                                    src="../assets/KCMH.png" 
                                     class="w-full h-32 object-contain"
                                     @error="handleLogoError" 
                                     alt="Company Logo" />

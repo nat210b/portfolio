@@ -5,14 +5,45 @@
 
             <!-- Profile Image -->
             <div class="flex justify-center md:justify-start">
-                <div class="relative">
-                    <div class="w-48 h-48 rounded-full bg-gradient-to-br from-blue-600 to-red-600 p-1">
-                        <div
-                            class="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
-                            <!-- รูปโปรไฟล์ -->
-                            <img src="../assets/profile.jpg" alt="Profile Image" class="w-full h-full object-cover" />
+                <div class="relative group">
+
+                    <!-- Main Profile Circle -->
+                    <!-- Gradient Border -->
+                    <div class="w-48 h-48 rounded-full bg-gradient-to-br from-blue-600 to-red-600 p-1 shadow-lg">
+                        <!-- Inner White Ring (Optional: เพิ่มขอบขาวด้านในเพื่อให้รูปดูเด่นขึ้น) -->
+                        <div class="w-full h-full rounded-full bg-white p-[2px]">
+                            <!-- Image Container -->
+                            <div
+                                class="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                                <!-- รูปโปรไฟล์ -->
+                                <img src="../assets/profile.jpg"
+                                    alt="Profile Image"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            </div>
                         </div>
                     </div>
+
+                    <!-- MBTI Section (มุมขวาล่าง) -->
+                    <!-- ใช้ absolute positioning เพื่อวางทับมุมขวาล่าง -->
+                    <div class="absolute bottom-2 -right-4 flex flex-col items-center z-10">
+
+                        <!-- MBTI Avatar Circle -->
+                        <!-- ใส่รูปตัวการ์ตูน MBTI ที่นี่ -->
+                        <div
+                            class="w-16 h-16 rounded-full bg-purple-100 border-4 border-white shadow-md flex items-center justify-center overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer">
+                            <img src="../assets/mbti.png" alt="MBTI Avatar"
+                                class="w-14 h-14 object-cover" />
+                        </div>
+
+                        <!-- MBTI Tag Badge -->
+                        <!-- ป้ายชื่อ Type -->
+                        <div
+                            class="-mt-3 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full border-2 border-white shadow-sm z-20">
+                            ENFP-T
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
 

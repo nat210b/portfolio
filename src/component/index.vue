@@ -2,13 +2,15 @@
     <section id="home"
         class="min-h-screen flex flex-col items-center justify-center bg-brand-navy text-white text-center px-6">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            Hi, I'm Nat 👋
+            Hi, I'm Nat <span class="wave-hand">👋</span>
         </h1>
+
         <p class="text-lg md:text-xl max-w-2xl text-slate-200">
             Full-stack developer with strong data background, experienced in building
             real-world systems from ERP platforms to data-driven healthcare solutions.
         </p>
     </section>
+
 
 
     <section id="profile" class="py-20 px-6 bg-white">
@@ -43,7 +45,6 @@
 
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-16">
-                <span class="text-indigo-600 font-semibold tracking-wider uppercase text-sm">Expertise</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Technical Skills</h2>
             </div>
 
@@ -147,92 +148,135 @@
         </div>
     </section>
 
-    <section id="soft-skill" class="py-24 px-6 bg-slate-50">
+    <section id="soft-skill" class="py-24 px-6 relative overflow-hidden">
+        <!-- Background decoration (optional subtle gradient) -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-indigo-50/30 -z-10"></div>
+
         <div class="max-w-5xl mx-auto">
+            <!-- Header -->
             <div class="text-center mb-16">
-                <span class="text-indigo-600 font-semibold tracking-wider uppercase text-sm">Personal Attributes</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Soft Skills</h2>
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-indigo-50 text-indigo-600 font-semibold tracking-wider uppercase text-xs mb-2 border border-indigo-100">
+                    Personal Attributes
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">
+                    Soft Skills
+                </h2>
+                <div class="w-16 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                <!-- Fluent in Thai & English -->
+                <!-- Thai Native -->
                 <div
-                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors">
+                    class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-5 transition-all duration-300 hover:border-indigo-300 hover:shadow-md hover:-translate-y-1">
                     <div
-                        class="w-14 h-14 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                        class="w-14 h-14 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center flex-shrink-0 shadow-inner">
                         <i class="fa-solid fa-language text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">Fluent in Thai & English</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">
-                            Proficient in both languages, enabling effective communication in diverse, multicultural
-                            environments.
-                        </p>
+                        <h3 class="text-lg font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Thai
+                            Native</h3>
+                        <p class="text-slate-500 text-sm">Native Proficiency</p>
+                    </div>
+                </div>
+
+                <!-- English B1 -->
+                <div
+                    class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-5 transition-all duration-300 hover:border-indigo-300 hover:shadow-md hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center flex-shrink-0 shadow-inner">
+                        <i class="fa-solid fa-language text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">
+                            English B1</h3>
+                        <p class="text-slate-500 text-sm">Intermediate Level</p>
+                    </div>
+                </div>
+
+                <!-- Eager to Learn -->
+                <div
+                    class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-5 transition-all duration-300 hover:border-emerald-300 hover:shadow-md hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center flex-shrink-0 shadow-inner">
+                        <i class="fa-solid fa-book-open text-2xl"></i> <!-- Changed icon slightly -->
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-700 group-hover:text-emerald-600 transition-colors">
+                            Eager to Learn</h3>
+                        <p class="text-slate-500 text-sm">Always improving</p>
                     </div>
                 </div>
 
                 <!-- Teamwork & Communication -->
                 <div
-                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors">
+                    class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-5 transition-all duration-300 hover:border-teal-300 hover:shadow-md hover:-translate-y-1">
                     <div
-                        class="w-14 h-14 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center flex-shrink-0">
+                        class="w-14 h-14 rounded-xl bg-teal-50 text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center flex-shrink-0 shadow-inner">
                         <i class="fa-solid fa-users text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">Teamwork & Communication</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">
-                            Collaborative team player with strong interpersonal skills, fostering open dialogue and
-                            synergy.
-                        </p>
+                        <h3 class="text-lg font-bold text-slate-700 group-hover:text-teal-600 transition-colors">
+                            Teamwork & Communication</h3>
+                        <p class="text-slate-500 text-sm">Collaborative spirit</p>
                     </div>
                 </div>
 
                 <!-- Problem Solving -->
                 <div
-                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors">
+                    class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-5 transition-all duration-300 hover:border-rose-300 hover:shadow-md hover:-translate-y-1">
                     <div
-                        class="w-14 h-14 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0">
+                        class="w-14 h-14 rounded-xl bg-rose-50 text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center flex-shrink-0 shadow-inner">
                         <i class="fa-solid fa-puzzle-piece text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">Problem Solving</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">
-                            Analytical mindset focused on identifying root causes and implementing effective, logical
-                            solutions.
-                        </p>
+                        <h3 class="text-lg font-bold text-slate-700 group-hover:text-rose-600 transition-colors">Problem
+                            Solving</h3>
+                        <p class="text-slate-500 text-sm">Critical thinking</p>
                     </div>
                 </div>
 
                 <!-- High Responsibility -->
                 <div
-                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors">
+                    class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-5 transition-all duration-300 hover:border-amber-300 hover:shadow-md hover:-translate-y-1">
                     <div
-                        class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center flex-shrink-0">
+                        class="w-14 h-14 rounded-xl bg-amber-50 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center flex-shrink-0 shadow-inner">
                         <i class="fa-solid fa-list-check text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">High Responsibility</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">
-                            Dedicated and reliable, taking full ownership of tasks and ensuring high-quality
-                            deliverables.
-                        </p>
+                        <h3 class="text-lg font-bold text-slate-700 group-hover:text-amber-600 transition-colors">High
+                            Responsibility</h3>
+                        <p class="text-slate-500 text-sm">Reliable & Accountable</p>
                     </div>
                 </div>
 
                 <!-- Ability to Work Under Pressure -->
                 <div
-                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-indigo-200 transition-colors md:col-span-2">
+                    class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-5 transition-all duration-300 hover:border-red-300 hover:shadow-md hover:-translate-y-1">
                     <div
-                        class="w-14 h-14 rounded-xl bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0">
+                        class="w-14 h-14 rounded-xl bg-red-50 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center flex-shrink-0 shadow-inner">
                         <i class="fa-solid fa-gauge-high text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">Ability to Work Under Pressure</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">
-                            Resilient and focused, maintaining performance and clarity even in high-stakes or
-                            tight-deadline situations.
-                        </p>
+                        <h3 class="text-lg font-bold text-slate-700 group-hover:text-red-600 transition-colors">Work
+                            Under Pressure</h3>
+                        <p class="text-slate-500 text-sm">Resilient & Focused</p>
+                    </div>
+                </div>
+
+                <!-- Punctual and Reliable -->
+                <div
+                    class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-5 transition-all duration-300 hover:border-violet-300 hover:shadow-md hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-violet-50 text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center flex-shrink-0 shadow-inner">
+                        <i class="fa-solid fa-clock text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-700 group-hover:text-violet-600 transition-colors">
+                            Punctual & Reliable</h3>
+                        <p class="text-slate-500 text-sm">Time management</p>
                     </div>
                 </div>
 
@@ -359,5 +403,45 @@ onBeforeUnmount(() => {
 .more-btn:hover {
     background-color: #8ab1ff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wave-hand {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: wave 2s infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 </style>

@@ -28,7 +28,7 @@
 
                     <!-- Description -->
                     <p class="text-gray-600 text-sm leading-relaxed mb-6 text-center">
-                        Developed a comprehensive ERP system for small medical clinics to streamline patient management, and billing operations.
+                        Developed an existing ERP system for small medical clinics to streamline patient management, and billing operations.
                     </p>
 
                     <!-- Tech Stack Tags -->
