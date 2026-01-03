@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <router-view style="padding-top: 100px;" />
+  <router-view/>
 </template>
 
 <script setup>

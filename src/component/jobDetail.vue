@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto p-6">
+    <div class="container mx-auto p-6 pt-20">
         <div v-if="loading" class="flex justify-center items-center h-screen">
             <div class="text-xl">Loading...</div>
         </div>
@@ -13,26 +13,12 @@
                         class="w-32 h-32 object-contain" @error="handleLogoError" />
                     <img v-if="job.company == 'Walt Disney world'" src="../assets/Walt-Disney-World-Logo.png"
                         class="w-32 h-32 object-contain" @error="handleLogoError" />
-                    <img v-if="job.company.includes('KCMH')" src="../assets/KCMH.jpeg" class="w-32 h-32 object-contain"
+                    <img v-if="job.company.includes('KCMH')" src="../assets/KCMH.png" class="w-32 h-32 object-contain"
                         @error="handleLogoError" />
                     <img v-if="job.company.includes('SSI')" src="../assets/ssi.png" class="w-32 h-32 object-contain"
                         @error="handleLogoError" />
                     <img v-if="job.company == 'BE 1 Digital Co. ltd'" src="../assets/be1.png"
                         class="w-32 h-32 object-contain" @error="handleLogoError" />
-                </div>
-
-                <!-- Map -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <MapExperience v-if="job.lat && job.lng" :activeExperience="{
-                        lat: job.lat,
-                        lng: job.lng,
-                        company: job.company,
-                        location: job.location
-                    }" />
-
-                    <div v-else class="w-full h-80 bg-gray-100 flex items-center justify-center">
-                        <span class="text-gray-400">No Location</span>
-                    </div>
                 </div>
                 <div class="flex gap-4 border-t">
                     <div v-if="job.location" class="pt-4">

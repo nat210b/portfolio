@@ -26,12 +26,40 @@
     </section>
 
     <section id="experiences" class="py-20 px-6 bg-white">
+        <h2 class="section-title text-center mb-12">Experiences</h2>
         <div class="flex bg-white p-3">
-            <TimelineExperience :experiences="allExperiences" style="width: 20%;" />
-            <MapExperience :activeExperience="activeExperience" style="width: 80%;" />
-
+            <TimelineExperience :experiences="allExperiences" @hover="activeExperience = $event" />
+            <MapExperience :activeExperience="activeExperience" />
         </div>
     </section>
+    <section id="certificate" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="section-title mb-6">Certificates</h2>
+
+            <p class="text-gray-600 mb-8">
+                Selected certifications related to data, software, and platform development.
+            </p>
+
+            <button class="more-btn" @click="showModal = true">
+                See Certificates
+            </button>
+        </div>
+
+        <!-- MODAL -->
+        <transition name="modal-fade">
+            <div v-if="showModal" class="modal-backdrop" @click.self="closeModal">
+                <div class="modal-box">
+                    <button class="close-btn" @click="closeModal">✕</button>
+
+                    <!-- 🔥 Carousel ของนาย -->
+                    <CertificateCarousel />
+                </div>
+            </div>
+        </transition>
+    </section>
+
+
+
     <section id="publication" class="py-20 px-6 bg-white">
         <div class="max-w-5xl mx-auto">
             <h2 class="section-title">Publication</h2>
@@ -105,6 +133,9 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore'
 import { db } from '@/firebase'
+import CertificateCarousel from './Cert.vue'
+
+const showCarousel = ref(false)
 
 import MapExperience from './MapExperience.vue'
 import TimelineExperience from './TimelineExperience.vue'
@@ -176,8 +207,42 @@ onMounted(() => {
     sections.forEach(section => observer.observe(section))
 })
 
+const showModal = ref(false)
+
+const closeModal = () => {
+    showModal.value = false
+}
+
+const handleEsc = (e) => {
+    if (e.key === 'Escape') closeModal()
+}
+
+onMounted(() => {
+    window.addEventListener('keydown', handleEsc)
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('keydown', handleEsc)
+})
+
 onBeforeUnmount(() => {
     if (unsubscribe) unsubscribe()
     if (observer) observer.disconnect()
 })
 </script>
+<style scoped>
+.more-btn {
+    border: 1px solid gainsboro;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: white;
+    color: #374151;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.more-btn:hover {
+    background-color: #8ab1ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+</style>

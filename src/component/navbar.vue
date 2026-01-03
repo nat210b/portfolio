@@ -1,16 +1,16 @@
 <template>
-    <nav class="bg-brand-navy px-6 py-4 flex items-center justify-between fixed top-0 left-0 w-full z-50">
+    <nav class="bg-brand-navy px-6 py-4 flex items-center justify-between fixed top-0 left-0 w-full" style="z-index: 9999;">
         <!-- Logo -->
-        <div class="text-xl font-bold tracking-wide text-white">
+        <div class="text-xl font-bold tracking-wide text-white" >
             Portfolio
         </div>
 
         <!-- Menu -->
         <div class="flex gap-6 text-sm font-medium text-white">
             <a href="/" class="hover:text-brand-teal transition">Home</a>
-            <a href="#about" class="hover:text-brand-teal transition">About</a>
-            <a href="#skills" class="hover:text-brand-teal transition">Skills</a>
-            <a href="#contact" class="hover:text-brand-teal transition">Contact</a>
+            <a href="#profile" class="hover:text-brand-teal transition">About</a>
+            <a href="#experiences" class="hover:text-brand-teal transition">experiences</a>
+            <a href="#certificate" class="hover:text-brand-teal transition">certificate</a>
         </div>
     </nav>
 </template>
