@@ -15,7 +15,7 @@
                             <!-- Image Container -->
                             <div
                                 class="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
-                                <!-- รูปโปรไฟล์ -->
+                               
                                 <img src="../assets/profile.jpg"
                                     alt="Profile Image"
                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -23,20 +23,17 @@
                         </div>
                     </div>
 
-                    <!-- MBTI Section (มุมขวาล่าง) -->
-                    <!-- ใช้ absolute positioning เพื่อวางทับมุมขวาล่าง -->
+                    
+                   
                     <div class="absolute bottom-2 -right-4 flex flex-col items-center z-10">
 
-                        <!-- MBTI Avatar Circle -->
-                        <!-- ใส่รูปตัวการ์ตูน MBTI ที่นี่ -->
+                        
                         <div
                             class="w-16 h-16 rounded-full bg-purple-100 border-4 border-white shadow-md flex items-center justify-center overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer">
                             <img src="../assets/mbti.png" alt="MBTI Avatar"
                                 class="w-14 h-14 object-cover" />
                         </div>
-
-                        <!-- MBTI Tag Badge -->
-                        <!-- ป้ายชื่อ Type -->
+                        
                         <div
                             class="-mt-3 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full border-2 border-white shadow-sm z-20">
                             ENFP-T
@@ -141,7 +138,7 @@ const props = defineProps({
     },
     jobTitle: {
         type: String,
-        default: 'Software Developer'
+        default: 'Developer'
     },
     description: {
         type: String,
