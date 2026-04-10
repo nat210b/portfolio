@@ -15,25 +15,23 @@
                             <!-- Image Container -->
                             <div
                                 class="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
-                               
-                                <img src="../assets/profile.jpg"
-                                    alt="Profile Image"
+
+                                <img src="../assets/profile.jpg" alt="Profile Image"
                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                             </div>
                         </div>
                     </div>
 
-                    
-                   
+
+
                     <div class="absolute bottom-2 -right-4 flex flex-col items-center z-10">
 
-                        
+
                         <div
                             class="w-16 h-16 rounded-full bg-purple-100 border-4 border-white shadow-md flex items-center justify-center overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer">
-                            <img src="../assets/mbti.png" alt="MBTI Avatar"
-                                class="w-14 h-14 object-cover" />
+                            <img src="../assets/mbti.png" alt="MBTI Avatar" class="w-14 h-14 object-cover" />
                         </div>
-                        
+
                         <div
                             class="-mt-3 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full border-2 border-white shadow-sm z-20">
                             ENFP-T
@@ -138,11 +136,11 @@ const props = defineProps({
     },
     jobTitle: {
         type: String,
-        default: 'Developer'
+        default: 'Developer '
     },
     description: {
         type: String,
-        default: 'Passionate full-stack developer specializing in building modern web applications with Vue.js and Node.js. Experienced in developing ERP systems, AI-powered solutions, and scalable healthcare applications.'
+        default: 'Full-Stack Software Engineer who enjoys building practical, data-driven applications that solve real-world problems. I work mainly with JavaScript and Python, focusing on modern frontend development, API integration, and cloud deployment. I’ve built systems that automate workflows and significantly reduce manual effort, combining software engineering with data and AI tools to deliver efficient solutions. also work as a freelance developer, collaborating directly with clients to design and build end-to-end applications from requirements gathering to deployment using platforms like Power Platform.'
     },
     education: {
         type: Object,

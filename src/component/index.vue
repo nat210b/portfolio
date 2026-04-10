@@ -6,8 +6,9 @@
         </h1>
 
         <p class="text-lg md:text-xl max-w-2xl text-slate-200">
-            Full-stack developer with strong data background, experienced in building
-            real-world systems from ERP platforms to data-driven healthcare solutions.
+            Experienced Full-Stack Developer specializing in end-to-end application development, from scalable back-end
+            systems to responsive front-end interfaces. I combine expertise in JavaScript and Python with a proven track
+            record in RESTful API integration, cloud deployment, and process automation.
         </p>
     </section>
 
@@ -178,7 +179,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Thai
                             Native</h3>
-                   
+
                     </div>
                 </div>
 
@@ -191,8 +192,8 @@
                     </div>
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">
-                            English B1</h3>
-                
+                            English (TOEIC 885)</h3>
+
                     </div>
                 </div>
 
@@ -206,7 +207,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-emerald-600 transition-colors">
                             Eager to Learn</h3>
-                   
+
                     </div>
                 </div>
 
@@ -220,7 +221,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-teal-600 transition-colors">
                             Teamwork & Communication</h3>
-               
+
                     </div>
                 </div>
 
@@ -234,7 +235,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-rose-600 transition-colors">Problem
                             Solving</h3>
-                      
+
                     </div>
                 </div>
 
@@ -248,7 +249,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-amber-600 transition-colors">High
                             Responsibility</h3>
-                   
+
                     </div>
                 </div>
 
@@ -262,7 +263,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-700 group-hover:text-red-600 transition-colors">Work
                             Under Pressure</h3>
-                   
+
                     </div>
                 </div>
 
