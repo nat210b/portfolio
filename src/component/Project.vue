@@ -77,7 +77,7 @@
                         :projectLink="hustle.projectLink" :isClickable="hustle.isClickable !== false" />
                 </div>
             </div>
-        </div>   
+        </div>
     </div>
 </template>
 <script>
@@ -93,8 +93,8 @@ export default {
             projects: [
                 {
                     id: 1,
-                    title: 'Daily Report System',
-                    description: 'Developed a daily reporting and tracking web application that reduces manual logging time from 15 to 5 minutes. The system integrates Kanban and Gantt chart planners, alongside a managerial dashboard for tracking daily operations, issues, and resolutions.',
+                    title: 'Daily Report & Task Planner',
+                    description: 'Developed a comprehensive web application for clinic staff to log daily tasks and plan schedules. Integrated Kanban and Gantt charts reduced reporting time from 15 minutes to 5 minutes.',
                     techStack: ['Vue.js', 'Node.js', 'Firebase'],
                     projectIcon: 'fa-solid fa-calendar-check',
                     projectLink: 'https://github.com/nat210b/Clinic-ERP-System',
@@ -103,9 +103,9 @@ export default {
                 },
                 {
                     id: 2,
-                    title: 'Clinic ERP System',
-                    description: 'Enhanced a clinic ERP system with microservices to streamline patient management, registration, and checkups, featuring automated document generation for prescriptions, medical certificates, and triage forms.',
-                    techStack: ['Vue.js', 'vite', 'Node.js', 'Firebase'],
+                    title: 'Clinic ERP & Automated Document',
+                    description: 'Enhanced an ERP system with a user-friendly UI for healthcare workflows. Developed a custom web-based printout engine for prescriptions and medical certificates with precise layouts.',
+                    techStack: ['Vue.js', 'Vite', 'Node.js', 'Firebase'],
                     projectIcon: 'fa-solid fa-hospital',
                     projectLink: 'https://github.com/nat210b/Clinic-ERP-System',
                     iconColor: '#0ea5e9',
@@ -113,9 +113,9 @@ export default {
                 },
                 {
                     id: 3,
-                    title: 'IT Service Chatbot',
-                    description: 'Built an intelligent chatbot for IT service desk to provide automated responses and troubleshoot common technical issues for users.',
-                    techStack: ['Power Platform', 'AD Manger API', 'Power agent'],
+                    title: 'Self-Service IT Support AI',
+                    description: 'Developed an AI Chatbot integrated with ADManager API via Power Automate to automate password resets. Handled 78 tickets in the first month, significantly reducing IT workload.',
+                    techStack: ['Power Virtual Agents', 'Dialogflow', 'Power Automate'],
                     projectIcon: 'fa-solid fa-robot',
                     projectLink: 'https://github.com/nat210b/IT-Service-Chatbot',
                     iconColor: '#10b981',
@@ -123,16 +123,56 @@ export default {
                 },
                 {
                     id: 4,
-                    title: 'Disciplinary Action System',
-                    description: 'Developed a paperless Disciplinary Action system for an HR department as a freelance project, featuring automated workflows, an intuitive UX/UI, and a tracking dashboard to significantly reduce manual reporting time.',
-                    techStack: ['Power Platform', 'SharePoint'],
-                    projectIcon: 'fa-solid fa-user-tie',
-                    projectLink: 'https://github.com/nat210b/Clinic-ERP-System',
-                    iconColor: '#f97316',
+                    title: 'Enterprise IT Ticketing System',
+                    description: 'Created a secure tracking system for IT cases with audit logs and approval workflows for sensitive tasks. Achieved a 4.93/5 satisfaction rating from over 685 user entries.',
+                    techStack: ['Power Apps', 'Power Automate', 'SharePoint'],
+                    projectIcon: 'fa-solid fa-ticket-alt',
+                    projectLink: 'https://github.com/nat210b/IT-Service-Chatbot',
+                    iconColor: '#f59e0b',
                     isClickable: false
                 },
                 {
                     id: 5,
+                    title: 'Automated Intern Payroll System',
+                    description: 'Streamlined HR processes by automating intern working hours and wage calculations. Replaced manual data collection with a digital approval flow and CRUD management.',
+                    techStack: ['Power Platform', 'SharePoint', 'Power Automate'],
+                    projectIcon: 'fa-solid fa-clock',
+                    projectLink: 'https://github.com/nat210b/Clinic-ERP-System',
+                    iconColor: '#ec4899',
+                    isClickable: false
+                },
+                {
+                    id: 6,
+                    title: 'Safety Reporting',
+                    description: 'Replaced paper-based safety reporting with a digitalized system for factory environments. Includes risk alerts, departmental analytics, and automated reporting to reduce workplace accidents.',
+                    techStack: ['Power Platform', 'Power Automate', 'Analytics'],
+                    projectIcon: 'fa-solid fa-shield-heart',
+                    projectLink: 'https://github.com/nat210b/Clinic-ERP-System',
+                    iconColor: '#ef4444',
+                    isClickable: false
+                },
+                {
+                    id: 7,
+                    title: 'HR Digital Certificate System',
+                    description: 'Digitized the request and issuance of employment and salary certificates. Reduces paper usage and manual processing time through automated document generation.',
+                    techStack: ['Power Apps', 'Power Automate', 'SharePoint'],
+                    projectIcon: 'fa-solid fa-file-signature',
+                    projectLink: 'https://github.com/nat210b/Clinic-ERP-System',
+                    iconColor: '#6366f1',
+                    isClickable: false
+                },
+                {
+                    id: 8,
+                    title: 'Corporate Resource Booking',
+                    description: 'Developed a unified booking system for corporate accommodation and vehicle tracking to optimize resource allocation and eliminate manual paperwork across departments.',
+                    techStack: ['Power Apps', 'SharePoint', 'Power Automate'],
+                    projectIcon:"fa-solid fa-boxes-stacked",
+                    projectLink: 'https://github.com/nat210b/Clinic-ERP-System',
+                    iconColor: '#14b8a6',
+                    isClickable: false
+                },
+                {
+                    id: 9,
                     title: 'Voice Classification AI',
                     description: 'Developed a deep learning model to classify Parkinson\'s disease patients through vowel sound analysis using advanced neural networks.',
                     techStack: ['Python', 'TensorFlow', 'Deep Learning'],
@@ -140,7 +180,7 @@ export default {
                     projectLink: 'https://github.com/nat210b/Voice-Classification-AI',
                     iconColor: '#8b5cf6',
                     isClickable: false
-                },
+                }
             ],
             sideHustle: [
                 {
