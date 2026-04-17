@@ -1,5 +1,8 @@
 <template>
-  <div id="map" class="h-[400px] md:h-[450px] w-full rounded-xl shadow-lg"></div>
+  <div
+    id="map"
+    class="h-[400px] w-full rounded-xl shadow-lg md:h-auto md:min-h-[500px] md:flex-1 md:self-stretch"
+  ></div>
 </template>
 
 <script>
@@ -17,7 +20,8 @@ export default {
   data() {
     return {
       map: null,
-      marker: null
+      marker: null,
+      resizeObserver: null
     }
   },
 
@@ -43,6 +47,17 @@ export default {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap'
     }).addTo(this.map)
+
+    this.$nextTick(() => {
+      if (this.map) this.map.invalidateSize()
+    })
+
+    if (typeof ResizeObserver !== 'undefined') {
+      this.resizeObserver = new ResizeObserver(() => {
+        if (this.map) this.map.invalidateSize()
+      })
+      this.resizeObserver.observe(this.$el)
+    }
 
     // 🔥 ถ้ามี activeExperience อยู่แล้ว → ตั้ง default เป็นที่ล่าสุดทันที
     if (this.activeExperience) {
@@ -84,6 +99,10 @@ export default {
   },
 
   beforeUnmount() {
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect()
+      this.resizeObserver = null
+    }
     if (this.map) {
       this.map.remove()
     }
