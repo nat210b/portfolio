@@ -77,8 +77,7 @@
                         :projectLink="hustle.projectLink" :isClickable="hustle.isClickable !== false" />
                 </div>
             </div>
-        </div>
-
+        </div>   
     </div>
 </template>
 <script>

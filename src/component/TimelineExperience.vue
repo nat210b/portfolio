@@ -3,7 +3,7 @@
     <div v-for="exp in filteredExperiences" :key="exp.id" class="timeline-item" @click="SelectedJobID(exp.id)"
       @mouseenter="$emit('hover', exp)">
       <div class="timeline-item-logo">
-        <img v-if="exp.company === 'WORLDMED CENTER'" src="../assets/worldmed.png" />
+        <img v-if="exp.company?.includes('Freelance')" src="../assets/myco.jpg" />
         <img v-else-if="exp.company.includes('KCMH')" src="../assets/KCMH.png" />
         <img v-else-if="exp.company === 'Sahaviriya Steel Industries PLC (SSI) (Headquarter)'"
           src="../assets/ssi.png" />
@@ -44,7 +44,7 @@ export default {
   methods: {
     SelectedJobID(id) {
       this.selectedID = id
-      this.$router.push({ name: 'jobDetail', params: { id } })
+      this.$router.push({ name: 'jobDetail', params: { ref: btoa(id) } })
     }
   }
 }
@@ -69,8 +69,8 @@ export default {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 20px;
-  overflow-y: auto;
+  padding: 10px;
+  overflow-y: visible;
   overflow-x: hidden;
 }
 

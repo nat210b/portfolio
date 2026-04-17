@@ -140,7 +140,7 @@ const props = defineProps({
     },
     description: {
         type: String,
-        default: 'Full-Stack Software Engineer who enjoys building practical, data-driven applications that solve real-world problems. I work mainly with JavaScript and Python, focusing on modern frontend development, API integration, and cloud deployment. I’ve built systems that automate workflows and significantly reduce manual effort, combining software engineering with data and AI tools to deliver efficient solutions. also work as a freelance developer, collaborating directly with clients to design and build end-to-end applications from requirements gathering to deployment using platforms like Power Platform.'
+        default: 'I am a Full-Stack Software Engineer dedicated to building scalable, data-driven applications that address complex real-world challenges. With core expertise in JavaScript and Python, I specialize in developing modern frontend interfaces, seamless API integrations, and efficient cloud deployments. My experience spans from building custom software solutions to implementing intelligent process automation that significantly optimizes workflows. As a developer who has managed end-to-end projects from requirement gathering to final delivery, I pride myself on bridging the gap between business needs and high-performance technical solutions.'
     },
     education: {
         type: Object,

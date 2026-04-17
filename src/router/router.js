@@ -13,7 +13,7 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/job-detail/:id',
+      path: '/job-detail/:ref',
       name: 'jobDetail',
       component: jobDetail,
     },
@@ -23,6 +23,15 @@ const router = createRouter({
       component: ExperienceAdmin,
     }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else if (to.hash) {
+      return { el: to.hash, behavior: 'smooth' }
+    } else {
+      return { top: 0, behavior: 'smooth' }
+    }
+  }
 })
 
 export default router

@@ -1,5 +1,5 @@
 <template>
-  <div id="map" class="h-[600px] w-full rounded-xl shadow-lg"></div>
+  <div id="map" class="h-[400px] md:h-[450px] w-full rounded-xl shadow-lg"></div>
 </template>
 
 <script>
@@ -62,10 +62,21 @@ export default {
       if (this.marker) {
         this.map.removeLayer(this.marker)
       }
+      
+      const wrapper = document.createElement('div')
+      wrapper.className = 'cursor-pointer p-1 text-center group'
+      wrapper.innerHTML = `
+        <div class="font-bold text-brand-navy group-hover:text-brand-teal transition-colors">${exp.title}</div>
+        <div class="text-sm text-gray-600 mb-1">${exp.company}</div>
+        <div class="text-xs font-semibold text-blue-500">Click to view details &rarr;</div>
+      `
+      wrapper.onclick = () => {
+        this.$router.push({ name: 'jobDetail', params: { ref: btoa(exp.id) } })
+      }
 
       this.marker = L.marker([exp.lat, exp.lng])
         .addTo(this.map)
-        .bindPopup(`<b>${exp.title}</b><br/>${exp.company}`)
+        .bindPopup(wrapper)
         .openPopup()
 
       this.map.setView([exp.lat, exp.lng], 8, { animate: true })
