@@ -147,7 +147,7 @@ const props = defineProps({
         default: () => ([{
             degree: 'Bachelor of Science in Information Technology',
             university: 'King Mongkut\'s university of Technology North Bangkok',
-            year: '2020-2024'
+            year: '2020-2025'
         }, {
             degree: 'Certificate in Electronic Industrial',
             university: 'Wangklaikangwon Industrial and community education college',
