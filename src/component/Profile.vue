@@ -136,7 +136,7 @@ const props = defineProps({
     },
     jobTitle: {
         type: String,
-        default: 'Developer '
+        default: 'Developer'
     },
     description: {
         type: String,
@@ -145,7 +145,7 @@ const props = defineProps({
     education: {
         type: Object,
         default: () => ([{
-            degree: 'Bachelor of Science in Information Technology',
+            degree: 'bachelor of science in technical education (Computer Technology)',
             university: 'King Mongkut\'s university of Technology North Bangkok',
             year: '2020-2025'
         }, {
