@@ -3,11 +3,14 @@
         <div class="carousel-header" v-if="title">
             <h2>{{ title }}</h2>
         </div>
-        
+
         <div class="carousel-container">
             <!-- Prev Button -->
             <button class="nav-btn prev" @click="scrollPrev" :class="{ hidden: isAtStart }">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
             </button>
 
             <!-- Scrollable Viewport -->
@@ -16,7 +19,14 @@
                     <div class="img-wrapper">
                         <img :src="img" @click="openZoom(img)" class="carousel-img" alt="Certificate" />
                         <div class="zoom-hint" @click="openZoom(img)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -24,26 +34,28 @@
 
             <!-- Next Button -->
             <button class="nav-btn next" @click="scrollNext" :class="{ hidden: isAtEnd }">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
             </button>
         </div>
 
         <!-- Pagination Dots -->
         <div class="carousel-indicators" v-if="dotCount > 1">
-            <span 
-                v-for="i in dotCount" 
-                :key="'dot-'+i" 
-                class="dot" 
-                :class="{ active: activeIndex === i - 1 }"
-                @click="scrollTo(i - 1)"
-            ></span>
+            <span v-for="i in dotCount" :key="'dot-' + i" class="dot" :class="{ active: activeIndex === i - 1 }"
+                @click="scrollTo(i - 1)"></span>
         </div>
 
         <!-- Zoom modal -->
         <transition name="fade">
             <div v-if="zoomImage" class="overlay" @click="zoomImage = null">
                 <button class="close-zoom" @click="zoomImage = null">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
                 </button>
                 <img :src="zoomImage" class="zoom-img" @click.stop />
             </div>
@@ -68,12 +80,12 @@ export default {
             isAtEnd: false,
             zoomImage: null,
             images: [
+                new URL("../assets/cert/HarvardPresentation_Certificate.JPG", import.meta.url).href,
+                new URL("../assets/cert/Toeic_nat_page-0001.jpg", import.meta.url).href,
+                new URL("../assets/cert/SCI-O08_page-0001.jpg", import.meta.url).href,
                 new URL("../assets/cert/Certificate_Disney_page-0001.jpg", import.meta.url).href,
                 new URL("../assets/cert/Certificate_page-0001.jpg", import.meta.url).href,
                 new URL("../assets/cert/Englishlevel_page-0001.jpg", import.meta.url).href,
-                new URL("../assets/cert/HarvardPresentation_Certificate.JPG", import.meta.url).href,
-                new URL("../assets/cert/SCI-O08_page-0001.jpg", import.meta.url).href,
-                new URL("../assets/cert/Toeic_nat_page-0001.jpg", import.meta.url).href,
             ],
         };
     },
@@ -94,16 +106,16 @@ export default {
         checkScroll() {
             const el = this.$refs.viewport;
             if (!el) return;
-            
+
             // Allow small pixel threshold for rounding differences across browsers
             this.isAtStart = el.scrollLeft <= 5;
             this.isAtEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 5;
-            
+
             const slideWidth = el.scrollWidth / this.images.length;
-            
+
             // Calculate how many items are visible on the screen
             const visibleItems = Math.round(el.clientWidth / slideWidth);
-            
+
             // Recompute dotCount = total items - visible items + 1
             let computedDots = this.images.length - visibleItems + 1;
             if (computedDots < 1) computedDots = 1;
@@ -167,11 +179,14 @@ export default {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
     gap: 16px;
     width: 100%;
-    padding: 10px 4px; /* padding for box-shadow on items */
+    padding: 10px 4px;
+    /* padding for box-shadow on items */
 }
 
 .carousel-viewport::-webkit-scrollbar {
@@ -201,7 +216,8 @@ export default {
 .img-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 70%; /* 10:7 Aspect ratio, good for certificates */
+    padding-top: 70%;
+    /* 10:7 Aspect ratio, good for certificates */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -222,7 +238,8 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* ensures certificate isn't cropped */
+    object-fit: contain;
+    /* ensures certificate isn't cropped */
     padding: 1rem;
     transition: transform 0.3s ease;
 }
@@ -269,7 +286,7 @@ export default {
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
     padding: 0;
 }
@@ -302,8 +319,14 @@ export default {
         width: 40px;
         height: 40px;
     }
-    .nav-btn.prev { left: 4px; }
-    .nav-btn.next { right: 4px; }
+
+    .nav-btn.prev {
+        left: 4px;
+    }
+
+    .nav-btn.next {
+        right: 4px;
+    }
 }
 
 /* Indicators */
@@ -350,7 +373,7 @@ export default {
     max-height: 90vh;
     border-radius: 8px;
     object-fit: contain;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .close-zoom {
@@ -380,6 +403,7 @@ export default {
 .fade-leave-active {
     transition: opacity 0.3s ease;
 }
+
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
