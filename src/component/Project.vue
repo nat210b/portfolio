@@ -97,9 +97,9 @@ export default {
                     description: 'Developed a comprehensive web application for clinic staff to log daily tasks and plan schedules. Integrated Kanban and Gantt charts reduced reporting time from 15 minutes to 5 minutes.',
                     techStack: ['Vue.js', 'Node.js', 'Firebase'],
                     projectIcon: 'fa-solid fa-calendar-check',
-                    projectLink: 'https://github.com/nat210b/Clinic-ERP-System',
+                    projectLink: 'https://reportapps-demo.vercel.app',
                     iconColor: '#4F46E5',
-                    isClickable: false
+                    isClickable: true
                 },
                 {
                     id: 2,
@@ -166,7 +166,7 @@ export default {
                     title: 'Corporate Resource Booking',
                     description: 'Developed a unified booking system for corporate accommodation and vehicle tracking to optimize resource allocation and eliminate manual paperwork across departments.',
                     techStack: ['Power Apps', 'SharePoint', 'Power Automate'],
-                    projectIcon:"fa-solid fa-boxes-stacked",
+                    projectIcon: "fa-solid fa-boxes-stacked",
                     projectLink: 'https://github.com/nat210b/Clinic-ERP-System',
                     iconColor: '#14b8a6',
                     isClickable: false
