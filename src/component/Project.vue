@@ -180,6 +180,16 @@ export default {
                     projectLink: 'https://github.com/nat210b/Voice-Classification-AI',
                     iconColor: '#8b5cf6',
                     isClickable: false
+                },
+                {
+                    id: 10,
+                    title: 'Cat Adopt',
+                    description: 'Developed a cat adoption platform during university studies, featuring a pet matching system and user profiles to help stray cats find permanent homes.',
+                    techStack: ['Vue.js', 'Tailwind CSS', 'Firebase'],
+                    projectIcon: 'fa-solid fa-cat',
+                    projectLink: 'https://github.com/nat210b/Cat-Adopt',
+                    iconColor: '#f97316',
+                    isClickable: true
                 }
             ],
             sideHustle: [
