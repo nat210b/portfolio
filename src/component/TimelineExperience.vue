@@ -3,7 +3,7 @@
     <div v-for="exp in filteredExperiences" :key="exp.id" class="timeline-item" @click="SelectedJobID(exp.id)"
       @mouseenter="$emit('hover', exp)">
       <div class="timeline-item-logo">
-        <img v-if="exp.company?.includes('Freelance')" src="../assets/myco.jpg" />
+        <img v-if="exp.company?.includes('Full-Stack Developer')" src="../assets/myco.jpg" />
         <img v-else-if="exp.company.includes('KCMH')" src="../assets/KCMH.png" />
         <img v-else-if="exp.company === 'Sahaviriya Steel Industries PLC (SSI) (Headquarter)'"
           src="../assets/ssi.png" />
