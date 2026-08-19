@@ -83,6 +83,7 @@ export default {
                 new URL("../assets/cert/HarvardPresentation_Certificate.JPG", import.meta.url).href,
                 new URL("../assets/cert/Toeic_nat_page-0001.jpg", import.meta.url).href,
                 new URL("../assets/cert/SCI-O08_page-0001.jpg", import.meta.url).href,
+                new URL("../assets/cert/Basic Data Scientist.png", import.meta.url).href,
                 new URL("../assets/cert/Certificate_Disney_page-0001.jpg", import.meta.url).href,
                 new URL("../assets/cert/Certificate_page-0001.jpg", import.meta.url).href,
                 new URL("../assets/cert/Englishlevel_page-0001.jpg", import.meta.url).href,
